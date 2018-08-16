@@ -1,0 +1,14 @@
+# Site settings
+title:       My Portfolio
+description: "Just another portfolio site."
+
+defaults:
+  -
+    values:
+      layout: "default"
+
+permalink: /:title/
+
+paginate: 10
+paginate_path: "/single/"
+timezone: US/Pacific
