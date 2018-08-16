@@ -12,3 +12,6 @@ permalink: /:title/
 paginate: 10
 paginate_path: "/single/"
 timezone: US/Pacific
+
+exclude:
+    - node_modules
