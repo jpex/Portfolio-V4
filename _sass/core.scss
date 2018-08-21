@@ -7,6 +7,16 @@ html {
 
 a {
   text-decoration: none;
+
+}
+
+
+
+p a {
+  background: linear-gradient(#fffff8, #fffff8),linear-gradient(#fffff8, #fffff8),linear-gradient(#777, #777);
+  background-size: 0.05em 1px,0.05em 1px,1px 1px;
+  background-repeat: no-repeat,no-repeat,repeat-x;
+  background-position: 0% 93%,100% 93%,0% 93%;
 }
 
 .logo {
@@ -28,7 +38,8 @@ header {
 .intro {
   color: #555;
   font-size: 22px;
-  margin: 10px 100px 175px;
+  margin: 10px 100px 125px;
+  a { color: #555; }
 }
 
 .bold {
@@ -39,6 +50,7 @@ header {
   font-family: "brothers", sans-serif;
   font-size: 24px;
   margin: 0 100px 25px;
+  padding-top: 50px;
 }
 
 
@@ -106,4 +118,27 @@ header {
 } .quick-info-b {
   min-width: 190px;
   max-width: 190px;
+}
+
+header {
+  display: flex;
+  //align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  a {
+    font-family: "SomeType Mono", monospace;
+    text-transform: uppercase;
+    margin-left: 40px;
+    color: #555;
+    font-size: 18px;
+  }
+}
+
+
+.nav-social {
+  margin-left: 25px;
+  a { color: #555; margin-left: 15px;}
 }
