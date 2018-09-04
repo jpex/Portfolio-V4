@@ -1,0 +1,61 @@
+$body-bg-color:       #111;
+$tree-bg-color:       #FFF;
+$tree-bg-color-hover: #F5F0F0;
+$tree-border-color:   #DDD;
+$tree-text-color:     #1f1f1f;
+
+.persona {
+  display: flex;
+  flex-direction: row;
+  padding: 0%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.individual {
+  min-width: 340px;
+  max-width: 340px;
+  background: $tree-bg-color;
+  box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.1);
+  color: $tree-text-color;
+  border-radius: 8px;
+  padding: 30px 20px;
+  margin: 15px 15px;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+  &.primary {
+    border-width: 2px;
+    border-color: red;
+    .tree & { border-color: $tree-border-color; }
+  }
+} .persona-title {
+  //font-size: 1.2em;
+  //font-weight: bold;
+  //margin-bottom: 20px;
+} .persona-name {
+  font-size: 1.44em;
+  margin-bottom: 5px;
+  font-weight: bold;
+} .persona-status {
+  font-size: 1.44em;
+  font-weight: bold;
+  margin: 30px 0;
+  border-top: 1px solid $tree-border-color;
+  border-bottom: 1px solid $tree-border-color;
+  padding: 30px 0;
+}
+
+.persona-goals span, .individual .persona-goals p {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0; margin: 0;
+  display: block;
+  background: transparent;
+}
+
+.persona-goals ul li {
+  font-size: 1em;
+  line-height: 1.2;
+  margin-top: 5px;
+}

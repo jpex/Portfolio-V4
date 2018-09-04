@@ -1,3 +1,6 @@
+@import 'persona';
+@import 'tree';
+
 *, *:before, *:after { box-sizing: border-box;}
 
 html {
@@ -205,6 +208,9 @@ a.i_linkedin { &:hover { background-color: #0077B5; color: white; } }
   &.patterns {
     background: linear-gradient(45deg, #ff5d5d 0%,#f54985 100%);
   }
+  &.sc {
+    background: linear-gradient(45deg, #208be6 0%,#5e55fb 100%);
+  }
 }
 
 
@@ -219,11 +225,17 @@ a.i_linkedin { &:hover { background-color: #0077B5; color: white; } }
     margin-bottom: 90px;
     display: flex;
     justify-content: space-between;
-    width: 1240px;
+    width: 100%;
+    max-width: 1240px;
     .quick-info-b { min-width: auto; }
   }
   h1, .subtitle {}
-  p, h3, h2 { width: 700px; }
+  p, h3, h2 {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 732px;
+    width: 100%;
+  }
   h1 {
     font-size: 52px;
     font-family: "brothers", sans-serif;
@@ -233,6 +245,7 @@ a.i_linkedin { &:hover { background-color: #0077B5; color: white; } }
     font-family: "SomeType Mono", monospace;
     font-size: 18px;
     margin-top: 8px;
+    padding: 0;
   }
   h2 {
     font-family: "brothers", sans-serif;
@@ -255,14 +268,29 @@ a.i_linkedin { &:hover { background-color: #0077B5; color: white; } }
     img {
       margin-bottom: 20px;
       margin-top: 20px;
+      width: 100%;
       max-width: 1240px;
       position: relative;
-      left: (1240 - 700)/2 * -1px;
+      left: 0;
       overflow: hidden;
+      @media (min-width: 1240px) {
+        width: auto;
+        left: (1240 - 700)/2 * -1px;
+      }
     }
   }
 
+
+
   a { color: #555; padding: 0 2px; margin: 0 -1px; }
+}
+
+.persona-container {
+  padding: 50px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 15px 15px 30px;
+  background: #38383D;
 }
 
 em {
@@ -271,4 +299,21 @@ em {
   font-size: 16px;
   margin-top: -20px;
   display: block;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.note {
+  background: #f5f0f0;
+  padding: 25px 9px;
+  margin-bottom: 60px;
+  p { max-width: 732 - 50px; font-size: 16px; margin-bottom: 0; }
+  h4 { font-family: "brothers", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 16px 8px;
+    text-transform: uppercase;
+  }
 }
