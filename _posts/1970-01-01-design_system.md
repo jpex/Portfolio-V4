@@ -9,7 +9,7 @@ layout: case
 casename: patterns
 ---
 
-<div class="hero-case {{ page.casename }}"><img class="hero-patterns" src="/images/hero_patterns.png" alt="Hero Patterns"/></div>
+<div class="hero-case {{ page.casename }}"><img class="hero-patterns" src="/images/hero_patterns.png" alt="Hero Patterns" width="2560" height="1008" /></div>
 
 <div class="case-intro">
   <div class="left">
