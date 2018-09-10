@@ -6,6 +6,7 @@
 html {
   background: #FFF;
   font-family: "adelle-sans", sans-serif;
+  color: #202020;
 }
 
 a {
@@ -14,13 +15,13 @@ a {
 
 }
 
-p a, .nav a {
+p a, .nav a, li a {
   &:hover { background: #D84B6E; color: #FFF; border-radius: 3px; }
 }
 
 
 
-p a {
+p a, li a {
   background: linear-gradient(#fffff8, #fffff8),linear-gradient(#fffff8, #fffff8),linear-gradient(#777, #777);
   background-size: 0.05em 1px,0.05em 1px,1px 1px;
   background-repeat: no-repeat,no-repeat,repeat-x;
@@ -120,7 +121,7 @@ header {
   padding: 15px 25px;
   background: #f5f0f0;
   max-width: 1340px;
-  img { max-width: 100%; }
+  img { max-width: 100%; height: auto; }
   @media (min-width: 768px) {
     padding: 30px 50px;
     margin: 25px;
@@ -273,8 +274,138 @@ a.i_linkedin { &:hover { background-color: #0077B5; color: white; } }
   &.ifit {
     background: #38383D;
   }
+  &.about {
+    height: 400px;
+    background: #D84B6E;
+    color: #FFF;
+    margin-bottom: 80px;
+    @media (min-width: 500px) {
+      height: 500px;
+    }
+  }
+  &.blog {
+    height: 250px;
+    background: #D84B6E;
+    color: #FFF;
+    margin-bottom: 80px;
+    @media (min-width: 500px) {
+      height: 300px;
+    }
+  }
 }
 
+// Block: .about
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  .case-intro {
+    margin: 40px 0 90px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1290px;
+    padding: 0 25px;
+    .quick-info-b { min-width: auto; }
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+  h1, .subtitle {}
+  p, h3, h2, h4, table, .media, .a-logo, ul {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 732px;
+    width: 100%;
+  }
+  .skills {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 1232px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 30px;
+    font-family: "brothers", sans-serif;
+    color: #FFF;
+    line-height: 1.4;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 732px;
+    width: 100%;
+    margin-top: 20px;
+    @media (min-width: 500px) {
+      font-size: 40px;
+    }
+  }
+  .subtitle {
+    font-family: "SomeType Mono", monospace;
+    font-size: 18px;
+    margin-top: 8px;
+    padding: 0;
+  }
+  h2 {
+    font-family: "brothers", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 26px;
+  }
+  h3 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  h4 {
+    font-weight: bold;
+    font-size: 22px; line-height: 1.7; color: #202020;
+    margin-top: 26px;
+  }
+  ul {
+    margin-bottom: 20px;
+  }
+  li {
+    font-size: 22px; line-height: 1.7; color: #202020;
+    margin: 5px 0 20px;
+
+      &:before {
+        content: "\2022";
+        position: absolute;
+        left: 0px;
+      }
+      padding-left: 22px;
+      position: relative;
+  }
+  p {
+    font-size: 22px; line-height: 1.7; color: #202020;
+    margin-bottom: 40px;
+    + h3 { margin-top: 26px; }
+    + h2 { margin-top: 30px; }
+    img {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 1240px;
+      position: relative;
+      left: 0;
+      overflow: hidden;
+      @media (min-width: 1240px) {
+        width: auto;
+        left: (1240 - 700)/2 * -1px;
+      }
+    }
+  }
+
+
+
+  a { color: #555; padding: 0 2px; margin: 0 -1px; }
+}
 
 // Block: .case
 .case {
@@ -367,9 +498,18 @@ em {
   font-family: "SomeType Mono", monospace;
   color: #555;
   font-size: 16px;
-  margin-top: -20px;
   display: block;
 }
+
+hr {
+  height: 1px;
+  border: none;
+  background: #ddd;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.case em { margin-top: -20px; }
 
 strong {
   font-weight: 700;
@@ -401,3 +541,90 @@ tr {
   border-top: 1px solid #ddd;
   padding-bottom: 3px;
 }
+
+
+
+.media {
+  margin-top: 70px;
+  display: flex;
+}
+
+.media-left {
+  margin: 0 70px 15px 0;
+  @media (min-width: 570px) { margin: 0 70px 0 15px; float: left; }
+}
+
+
+.a-logo {
+  position: relative;
+  left: 16px;
+  margin-bottom: -18px;
+  margin-top: 22px;
+}
+
+.logo-attn {
+  background-image: url('/images/misc/attn.png');
+  background-repeat: no-repeat;
+  height: 25px;
+}
+
+.logo-oz {
+  background-image: url('/images/misc/ozge.png');
+  background-repeat: no-repeat;
+  height: 32px;
+  background-size: 58px 32px;
+}
+
+.logo-fl {
+  background-image: url('/images/misc/freelance.png');
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 43px;
+  background-size: 70px 43px;
+}
+
+.logo-ifit {
+  background-image: url('/images/misc/ifit.png');
+  background-repeat: no-repeat;
+  height: 31px;
+}
+
+.logo-ucf {
+  background-image: url('/images/misc/ucf.png');
+  background-repeat: no-repeat;
+  height: 43.3px;
+  background-size: 40px 43.3px;
+  display: none;
+  @media (min-width: 570px) { display: block; }
+}
+
+.skills {
+  display: flex;
+  background: #f5f0f0;
+  padding: 12px 12px 0;
+  margin: -15px 0 40px;
+}
+
+.skill {
+  font-size: 18px;
+  font-family: "SomeType Mono", monospace;
+  color: #555;
+  .skill-list & { line-height: 2; }
+} .skill-list {
+  margin: 0 15px 30px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+} .skill-title {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #202020;
+  margin-top: 8px;
+  margin-bottom: 0px;
+} .skill-btn {
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.exp { margin-top: 70px; }
