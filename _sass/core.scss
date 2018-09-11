@@ -1,6 +1,13 @@
 @import 'persona';
 @import 'tree';
 
+@font-face {
+ font-family: 'SomeType Mono';
+ font-style: normal;
+ font-weight: 300;
+ src: url('/fonts/SometypeMono-Regular.otf') format('opentype');
+}
+
 *, *:before, *:after { box-sizing: border-box;}
 
 html {
@@ -422,6 +429,15 @@ a.i_linkedin { &:hover { background-color: #0077B5; color: white; } }
 
 
   a { color: #555; padding: 0 2px; margin: 0 -1px; }
+}
+
+.cases-mini {
+  background: #222;
+  width: 100%;
+  color: #fff;
+  .card { background-color: #38383D; color: #fff; }
+  h3 { margin-top: 8px; background: none; color: #fff; &:hover { color: #aaa; background: none; }}
+  .bold { color: #fff;  }
 }
 
 // Block: .case
