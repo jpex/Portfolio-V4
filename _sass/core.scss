@@ -289,6 +289,9 @@ a.i_linkedin { &:hover { background-color: #0077B5; color: white; } }
     @media (min-width: 500px) {
       height: 500px;
     }
+    &.res {
+      height: 350px;
+    }
   }
   &.blog {
     height: 250px;
@@ -324,7 +327,7 @@ a.i_linkedin { &:hover { background-color: #0077B5; color: white; } }
     }
   }
   h1, .subtitle {}
-  p, h3, h2, h4, table, .media, .a-logo, ul {
+  p, h3, h2, h4, table, .media, .a-logo, ul, h5 {
     padding-left: 16px;
     padding-right: 16px;
     max-width: 732px;
@@ -356,6 +359,12 @@ a.i_linkedin { &:hover { background-color: #0077B5; color: white; } }
     margin-top: 8px;
     padding: 0;
   }
+  h5 {
+    font-family: "SomeType Mono", monospace;
+    font-size: 18px;
+    margin-bottom: 18px;
+    margin-top: 4px;
+  }
   h2 {
     font-family: "brothers", sans-serif;
     font-size: 30px;
@@ -374,6 +383,7 @@ a.i_linkedin { &:hover { background-color: #0077B5; color: white; } }
     font-size: 22px; line-height: 1.7; color: #202020;
     margin-top: 26px;
   }
+  hr + h4 { margin-top: 0; }
   ul {
     margin-bottom: 20px;
   }
