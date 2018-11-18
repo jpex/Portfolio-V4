@@ -23,7 +23,7 @@ a {
 
 .container {
   -webkit-animation: Grad 30s ease infinite;
-  background: linear-gradient(135deg, rgba(22,22,22,1) 0%,transparent 100%);
+  background: linear-gradient(135deg, rgba(22,22,22,1) 0%,gba(38,38,38,1) 100%);
   background: -moz-linear-gradient(135deg, rgba(22,22,22,1) 0%,rgba(22,22,22,1) 100%);
   background-size: 400% 400%;
   padding: 100px;
